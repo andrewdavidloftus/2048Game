@@ -7,10 +7,14 @@
 
 int main() {
     // Small demo
-    int initialBoard[16] = {2, 2, 0, 2,
-                            0, 4, 2, 4,
-                            2, 4, 4, 2,
-                            2, 2, 2, 2};
+    int initialBoard[16] = {0, 2, 2, 4,
+                            4, 2, 2, 0,
+                            4, 2, 2, 4,
+                            4, 2, 4, 4};
+    board gameBoard(initialBoard);
+    gameBoard.ShiftDown();
+    gameBoard.Print(2);
+    /*
     board gameBoard(initialBoard);
     std::cout << "Demo of shifting" << std::endl;
     gameBoard.Print();
@@ -24,11 +28,6 @@ int main() {
     gameBoard.ShiftRight();
     gameBoard.Print();
 
-    std::cout << "Demo of two generate calls" << std::endl;
-    gameBoard.Generate();
-    gameBoard.Print();
-    gameBoard.Generate();
-    gameBoard.Print();
 
     std::cout << "Demo of state updates" << std::endl;
     std::cout << "State: " << gameBoard.UpdateState() << std::endl;
@@ -43,5 +42,6 @@ int main() {
     gameBoard.SetValue(1, 1, 2048);
     gameBoard.Print();
     std::cout << "State: " << gameBoard.UpdateState() << std::endl;
+     */
     return 0;
 }
