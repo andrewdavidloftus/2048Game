@@ -1,6 +1,15 @@
-cmake_minimum_required(VERSION 3.9)
-project(Final)
+cmake_minimum_required(VERSION 3.10)
+project(Meh)
 
-set(CMAKE_CXX_STANDARD 11)
+include_directories(
+        include
+        lib/glad/include
+        lib/glfw/include
+)
 
-add_executable(Final main.cpp board.h)
+set(CMAKE_CXX_STANDARD 17)
+
+add_subdirectory(lib/glfw)
+
+add_executable(Meh main.cpp glad.c)
+target_link_libraries(Meh glfw)
