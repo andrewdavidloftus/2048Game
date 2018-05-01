@@ -47,137 +47,137 @@ const char* Fragment_Shader =
 
 
 GLfloat Block_Verticies[16][20] =
-{
-    {
-        //Block 0
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 1
-        //Position              //Texture Coordinates
-        -0.025f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.025f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.325f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.325f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 2
-        //Position              //Texture Coordinates
-        0.325f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        0.325f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        0.025f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        0.025f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 3
-        //Position              //Texture Coordinates
-        0.675f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        0.675f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        0.375f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        0.375f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 4
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 5
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 6
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 7
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 8
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 9
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 10
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 11
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 12
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 13
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 14
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    },
-    {
-        //Block 15
-        //Position              //Texture Coordinates
-        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
-        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
-        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
-    }
+        {
+                {
+                        //Block 0
+                        //Position              //Texture Coordinates
+                        -0.375f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.375f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.675f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.675f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 1
+                        //Position              //Texture Coordinates
+                        -0.025f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.025f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.325f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.325f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 2
+                        //Position              //Texture Coordinates
+                        0.325f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.325f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.025f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.025f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 3
+                        //Position              //Texture Coordinates
+                        0.675f, 0.419444f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.675f, 0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.375f, 0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.375f, 0.419444f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 4
+                        //Position              //Texture Coordinates
+                        -0.375f, 0.108333f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.375f, -0.158333f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.675f, -0.158333f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.675f, 0.108333f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 5
+                        //Position              //Texture Coordinates
+                        -0.025f, 0.108333f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.025f, -0.158333f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.325f, -0.158333f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.325f, 0.108333f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 6
+                        //Position              //Texture Coordinates
+                        0.325f, 0.108333f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.325f, -0.158333f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.025f, -0.158333f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.025f, 0.108333f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 7
+                        //Position              //Texture Coordinates
+                        0.675f, 0.108333f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.675f, -0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.375f, -0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.375f, 0.108333f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 8
+                        //Position              //Texture Coordinates
+                        -0.375f, -0.202778f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.375f, -0.469444f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.675f, -0.469444f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.675f, -0.202778f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 9
+                        //Position              //Texture Coordinates
+                        -0.025f, -0.202778f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.025f, -0.469444f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.325f, -0.469444f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.325f, -0.202778f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 10
+                        //Position              //Texture Coordinates
+                        0.325f, -0.202778f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.325f, -0.469444f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.025f, -0.469444f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.025f, -0.202778f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 11
+                        //Position              //Texture Coordinates
+                        0.675f, -0.202778f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.675f, -0.469444f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.375f, -0.469444f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.375f, -0.202778f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 12
+                        //Position              //Texture Coordinates
+                        -0.375f, -0.513889f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.375f, -0.780556f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.675f, -0.780556f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.675f, -0.513889f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 13
+                        //Position              //Texture Coordinates
+                        -0.025f, -0.513889f, 0.0f, 1.0f, 1.0f,  // top right
+                        -0.025f, -0.780556f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        -0.325f, -0.780556f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        -0.325f, -0.513889f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 14
+                        //Position              //Texture Coordinates
+                        0.325f, -0.513889f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.325f, -0.780556f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.025f, -0.780556f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.025f, -0.513889f, 0.0f, 0.0f, 1.0f   // top left
+                },
+                {
+                        //Block 15
+                        //Position              //Texture Coordinates
+                        0.675f, -0.513889f, 0.0f, 1.0f, 1.0f,  // top right
+                        0.675f, -0.780556f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.375f, -0.780556f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.375f, -0.513889f, 0.0f, 0.0f, 1.0f   // top left
+                }
 
-};
+        };
 
 
 GLuint indices[] = {  // note that we start from 0!
@@ -192,9 +192,7 @@ bool keys[1024] = { false };
 
 unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BlockEBO[16], BoardVAO, BoardEBO;
 unsigned int BoardTexture, NumberTextures[13];
-int vShader = glCreateShader(GL_VERTEX_SHADER);
-int fShader = glCreateShader(GL_FRAGMENT_SHADER);
-int Prog = glCreateProgram();
+
 
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -313,17 +311,7 @@ void InitializeBlocks()
 
 void DrawBlocks()
 {
-    for (int i = 0; i < 16; i++)
-    {
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, NumberTextures[Number]);
-        glUniform1i(glGetUniformLocation(Prog, "NumberTexture"), 0);
-        glBindVertexArray(BlockVAO[i]);
-        glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[Position]), Block_Verticies[Position], GL_STATIC_DRAW);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);
-    }
+
 
 }
 
@@ -585,17 +573,10 @@ void loadNumberTextures()
 }
 
 
+
 void InitializeShaders()
 {
-    glShaderSource(vShader, 1, &Vertex_Shader, NULL);
-    glCompileShader(vShader);
-    glShaderSource(fShader, 1, &Fragment_Shader, NULL);
-    glCompileShader(fShader);
-    glAttachShader(Prog, vShader);
-    glAttachShader(Prog, fShader);
-    glLinkProgram(Prog);
-    glDeleteShader(vShader);
-    glDeleteShader(fShader);
+
 }
 
 int main()
@@ -624,7 +605,18 @@ int main()
     }
 
 
-    InitializeShaders();
+    int vShader = glCreateShader(GL_VERTEX_SHADER);
+    int fShader = glCreateShader(GL_FRAGMENT_SHADER);
+    int Prog = glCreateProgram();
+    glShaderSource(vShader, 1, &Vertex_Shader, NULL);
+    glCompileShader(vShader);
+    glShaderSource(fShader, 1, &Fragment_Shader, NULL);
+    glCompileShader(fShader);
+    glAttachShader(Prog, vShader);
+    glAttachShader(Prog, fShader);
+    glLinkProgram(Prog);
+    glDeleteShader(vShader);
+    glDeleteShader(fShader);
 
 
 
@@ -707,7 +699,17 @@ int main()
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 
-        DrawBlocks();
+        for (int i = 0; i < 16; i++)
+        {
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, NumberTextures[i%13]);
+            glUniform1i(glGetUniformLocation(Prog, "NumberTexture"), 0);
+            glBindVertexArray(BlockVAO[i]);
+            glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
+            glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            glBindVertexArray(0);
+        }
 
 
 
