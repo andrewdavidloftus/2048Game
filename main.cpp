@@ -108,8 +108,8 @@ GLfloat Block_Verticies[16][20] =
                         //Block 7
                         //Position              //Texture Coordinates
                         0.675f, 0.108333f, 0.0f, 1.0f, 1.0f,  // top right
-                        0.675f, -0.152778f, 0.0f, 1.0f, 0.0f,  // bottom right
-                        0.375f, -0.152778f, 0.0f, 0.0f, 0.0f,  // bottom left
+                        0.675f, -0.157778f, 0.0f, 1.0f, 0.0f,  // bottom right
+                        0.375f, -0.157778f, 0.0f, 0.0f, 0.0f,  // bottom left
                         0.375f, 0.108333f, 0.0f, 0.0f, 1.0f   // top left
                 },
                 {
@@ -190,9 +190,9 @@ GLuint Position = 0;
 GLuint Number = 0;
 bool keys[1024] = { false };
 
-unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BlockEBO[16], BoardVAO, BoardEBO;
+unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BoardVAO, EBO;
 unsigned int BoardTexture, NumberTextures[13];
-
+int vShader, fShader, Prog;
 
 
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
@@ -295,7 +295,7 @@ void InitializeBlocks()
         glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
         glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BlockEBO[i]);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void *) 0);
@@ -576,7 +576,18 @@ void loadNumberTextures()
 
 void InitializeShaders()
 {
-
+    vShader = glCreateShader(GL_VERTEX_SHADER);
+    fShader = glCreateShader(GL_FRAGMENT_SHADER);
+    Prog = glCreateProgram();
+    glShaderSource(vShader, 1, &Vertex_Shader, NULL);
+    glCompileShader(vShader);
+    glShaderSource(fShader, 1, &Fragment_Shader, NULL);
+    glCompileShader(fShader);
+    glAttachShader(Prog, vShader);
+    glAttachShader(Prog, fShader);
+    glLinkProgram(Prog);
+    glDeleteShader(vShader);
+    glDeleteShader(fShader);
 }
 
 int main()
@@ -605,18 +616,7 @@ int main()
     }
 
 
-    int vShader = glCreateShader(GL_VERTEX_SHADER);
-    int fShader = glCreateShader(GL_FRAGMENT_SHADER);
-    int Prog = glCreateProgram();
-    glShaderSource(vShader, 1, &Vertex_Shader, NULL);
-    glCompileShader(vShader);
-    glShaderSource(fShader, 1, &Fragment_Shader, NULL);
-    glCompileShader(fShader);
-    glAttachShader(Prog, vShader);
-    glAttachShader(Prog, fShader);
-    glLinkProgram(Prog);
-    glDeleteShader(vShader);
-    glDeleteShader(fShader);
+    InitializeShaders();
 
 
 
@@ -633,15 +633,14 @@ int main()
     glGenVertexArrays(1, &BoardVAO);
     glGenBuffers(16, BlockVBO);
     glGenBuffers(1, &BoardVBO);
-    glGenBuffers(16, BlockEBO);
-    glGenBuffers(1, &BoardEBO);
+    glGenBuffers(1, &EBO);
 
     InitializeBlocks();
 
     glBindVertexArray(BoardVAO);
     glBindBuffer(GL_ARRAY_BUFFER, BoardVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Board_Verticies), Board_Verticies, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BoardEBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices, GL_STATIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) 0);
     glEnableVertexAttribArray(0);
@@ -721,8 +720,7 @@ int main()
     glDeleteVertexArrays(16, BlockVAO);
     glDeleteBuffers(16, BlockVBO);
     glDeleteBuffers(1, &BoardVBO);
-    glDeleteBuffers(1, &BoardEBO);
-    glDeleteBuffers(16, BlockEBO);
+    glDeleteBuffers(1, &EBO);
 
     glfwTerminate();
     return 0;
