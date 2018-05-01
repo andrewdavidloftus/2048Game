@@ -311,8 +311,17 @@ void InitializeBlocks()
 
 void DrawBlocks()
 {
-
-
+    for (int i = 0; i < 16; i++)
+    {
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, NumberTextures[i%13]);
+        glUniform1i(glGetUniformLocation(Prog, "NumberTexture"), 0);
+        glBindVertexArray(BlockVAO[i]);
+        glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+        glBindVertexArray(0);
+    }
 }
 
 
@@ -697,20 +706,7 @@ int main()
         glBindVertexArray(BoardVAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
-
-        for (int i = 0; i < 16; i++)
-        {
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, NumberTextures[i%13]);
-            glUniform1i(glGetUniformLocation(Prog, "NumberTexture"), 0);
-            glBindVertexArray(BlockVAO[i]);
-            glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-            glBindVertexArray(0);
-        }
-
-
+        DrawBlocks();
 
         glfwSwapBuffers(window);
         glfwPollEvents();
