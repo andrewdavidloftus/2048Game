@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="2048" targetName="glfw" />
       <config projectName="2048" targetName="uninstall" />
+      <config projectName="2048" targetName="glfw" />
       <config projectName="2048" targetName="2048" />
     </generated>
   </component>
@@ -14,9 +14,405 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b028dc8-87ce-4cef-b361-e34cf4421927" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/.appveyor.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/.github/CONTRIBUTING.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/.travis.yml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/MacOSXBundleInfo.plist.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/amd64-mingw32msvc.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/i586-mingw32msvc.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/i686-pc-mingw32.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/i686-w64-mingw32.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/modules/FindMir.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/modules/FindVulkan.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/modules/FindWaylandProtocols.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/modules/FindXKBCommon.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMake/x86_64-w64-mingw32.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/CMakeLists.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/COPYING.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/Makefile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/cmake_install.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/cmake_uninstall.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/cmake_uninstall.cmake.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/KHR/khrplatform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/getopt.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/getopt.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/glad.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/glad/glad.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/linmath.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/mingw/_mingw_dxhelper.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/mingw/dinput.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/mingw/xinput.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/tinycthread.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/tinycthread.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/vulkan/vk_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/deps/vulkan/vulkan.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/CMakeLists.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/Doxyfile.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/DoxygenLayout.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/build.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/compat.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/compile.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/context.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/extra.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/extra.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/footer.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/header.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/annotated.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/arrowdown.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/arrowright.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/bc_s.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/bdwn.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/bug.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/build_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/build_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/classes.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/closed.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/compat_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/compat_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/compile_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/compile_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/context_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/context_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/dir_1f12d41534b9d9c99a183e145b58d6f3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/dir_351f617146de9499414a6c099ebbe0ca.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/dir_4bcf8e981abe5adb811ce4f57d70c9af.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/doc.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/doxygen.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/doxygen.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/dynsections.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/extra.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/files.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/folderclosed.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/folderopen.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/functions.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/functions_vars.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/glfw3_8h.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/glfw3_8h_source.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/glfw3native_8h.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/glfw3native_8h_source.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_b.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_c.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_d.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_b.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_c.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_d.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_e.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_f.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_g.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_h.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_i.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_j.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_k.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_l.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_m.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_n.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_o.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_p.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_r.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_s.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_t.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_defs_v.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_e.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_f.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_func.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_g.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_h.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_i.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_j.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_k.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_l.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_m.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_n.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_o.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_p.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_r.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_s.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_t.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_type.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_v.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/globals_w.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__buttons.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__context.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__errors.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__init.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__input.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__joysticks.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__keys.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__mods.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__monitor.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__native.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__shapes.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__vulkan.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/group__window.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/input_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/input_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/intro_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/intro_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/main_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/modules.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/monitor_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/monitor_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/moving_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/moving_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/nav_f.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/nav_g.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/nav_h.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/news.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/news_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/open.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/pages.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/quick_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/quick_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_4.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_5.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_6.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_6.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_7.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_7.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_8.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_8.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_9.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_9.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_a.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_a.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_b.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_b.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_c.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_c.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_d.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_d.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_e.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_e.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_f.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/all_f.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/classes_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/classes_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/close.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/defines_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/defines_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_4.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_5.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_6.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_6.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_7.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_7.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_8.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/files_8.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/functions_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/functions_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_4.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_5.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_6.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_6.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_7.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_7.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_8.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_8.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_9.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/groups_9.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/mag_sel.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/nomatches.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_4.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_5.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_6.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_6.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_7.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_7.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_8.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/pages_8.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/search.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/search.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/search_l.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/search_m.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/search_r.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/searchdata.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/typedefs_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/typedefs_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_0.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_0.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_3.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_3.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_4.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_4.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_5.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_5.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_6.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/search/variables_6.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/spaces.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/splitbar.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/structGLFWgammaramp.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/structGLFWimage.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/structGLFWvidmode.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/sync_off.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/sync_on.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/tab_a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/tab_b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/tab_h.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/tab_s.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/tabs.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/vulkan_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/vulkan_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/window_8dox.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/html/window_guide.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/input.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/internal.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/intro.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/main.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/monitor.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/moving.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/news.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/quick.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/spaces.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/vulkan.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/docs/window.dox" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/CMakeLists.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/boing.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/gears.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/glfw.icns" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/glfw.ico" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/glfw.rc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/heightmap.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/particles.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/simple.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/splitview.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/examples/wave.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/include/GLFW/glfw3.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/include/GLFW/glfw3native.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/CMakeLists.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/Makefile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cmake_install.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_init.m" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_joystick.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_joystick.m" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_monitor.m" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_time.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/cocoa_window.m" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/context.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/egl_context.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/egl_context.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw3.pc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw3.pc.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw3Config.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw3Config.cmake.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw3ConfigVersion.cmake" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw_config.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glfw_config.h.in" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glx_context.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/glx_context.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/init.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/input.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/internal.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/linux_joystick.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/linux_joystick.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/mir_init.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/mir_monitor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/mir_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/mir_window.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/monitor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/nsgl_context.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/nsgl_context.m" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/posix_time.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/posix_time.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/posix_tls.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/posix_tls.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/vulkan.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wgl_context.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wgl_context.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_init.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_joystick.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_joystick.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_monitor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_time.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_tls.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/win32_window.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/window.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wl_init.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wl_monitor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wl_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/wl_window.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/x11_init.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/x11_monitor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/x11_platform.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/x11_window.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/xkb_unicode.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/src/xkb_unicode.h" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/CMakeLists.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/clipboard.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/cursor.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/empty.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/events.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/gamma.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/glfwinfo.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/icon.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/iconify.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/joysticks.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/monitors.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/msaa.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/reopen.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/sharing.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/tearing.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/threads.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/timeout.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/title.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/vulkan.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/lib/glfw-3.2.1/tests/windows.c" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/lib/glfw-3.2.1/src/CMakeFiles/" />
+    <ignored path="$PROJECT_DIR$/lib/glfw-3.2.1/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,52 +422,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="696" column="26" lean-forward="false" selection-start-line="696" selection-start-column="26" selection-end-line="696" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-                <element signature="e#121#137#0" expanded="true" />
-                <element signature="e#218#247#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="board.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/board.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5153">
-              <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,10 +434,10 @@
         <option value="$PROJECT_DIR$/board.cpp" />
         <option value="$PROJECT_DIR$/board.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/board.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -96,11 +447,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1101" />
-    <option name="y" value="58" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="146" />
+    <option name="y" value="23" />
     <option name="width" value="1294" />
-    <option name="height" value="1407" />
+    <option name="height" value="815" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -128,7 +479,7 @@
             <path>
               <item name="2048" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="2048Game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,6 +544,8 @@
       <option name="presentableId" value="Default" />
       <updated>1523286723160</updated>
       <workItem from="1523286724319" duration="35496000" />
+      <workItem from="1525235649304" duration="385000" />
+      <workItem from="1525288929216" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="Working Version (No score or animation)">
       <created>1525231005855</created>
@@ -215,45 +568,40 @@
       <option name="project" value="LOCAL" />
       <updated>1525231576961</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="remove bad folders">
+      <created>1525231702593</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525231702593</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39657000" />
+    <option name="totallyTimeSpent" value="40779000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="23" width="1294" height="815" extended-state="0" />
-    <editor active="true" />
+    <frame x="146" y="23" width="1294" height="815" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.096622154" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.096622154" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25416666" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847276" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.096875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3998465" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,11 +649,17 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -313,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2610">
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -322,7 +675,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -332,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -340,7 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -381,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -418,28 +767,10 @@
     <entry file="file://$PROJECT_DIR$/glad.h" />
     <entry file="file://$PROJECT_DIR$/glad.c" />
     <entry file="file://$PROJECT_DIR$/src/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1601">
           <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -447,31 +778,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-109">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/glew-2.1.0/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2964">
-          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/lib/glew-2.1.0/build/cmake/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3932">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/glew-2.1.0/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/lib/glew-2.1.0/build/cmake/Makefile" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,39 +819,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="75">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/board.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5153">
+        <state relative-caret-position="5916">
           <caret line="497" column="0" lean-forward="false" selection-start-line="497" selection-start-column="0" selection-end-line="497" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="696" column="26" lean-forward="false" selection-start-line="696" selection-start-column="26" selection-end-line="696" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#121#137#0" expanded="true" />
-            <element signature="e#218#247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="10470">
+          <caret line="704" column="5" lean-forward="true" selection-start-line="704" selection-start-column="5" selection-end-line="704" selection-end-column="5" />
         </state>
       </provider>
     </entry>

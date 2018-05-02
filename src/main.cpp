@@ -681,7 +681,6 @@ int main()
         }
 
         if (keyPressed != -1) {
-
             switch (keyPressed) {
                 case 0:
                     gameBoard.ShiftUp();
