@@ -1,4 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2017.3.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Andrew\Documents\School\ECE 4122\Final"
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/RobertCooper/Documents/ECE_4122/2048Game
+-- Could NOT find Vulkan (missing: VULKAN_LIBRARY VULKAN_INCLUDE_DIR) 
+-- Using Cocoa for window creation
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Andrew/Documents/School/ECE 4122/Final/cmake-build-debug
+-- Build files have been written to: /Users/RobertCooper/Documents/ECE_4122/2048Game/cmake-build-debug
