@@ -206,7 +206,7 @@ bool keys[1024] = { false };
 int keyPressed = -1;
 board gameBoard;
 
-unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BlockEBO[16], BoardVAO, BoardEBO, MenuVBO[6], MenuVAO[6], MenuEBO[6];
+unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BoardVAO, EBO, MenuVBO[6], MenuVAO[6], MenuEBO[6];
 unsigned int BoardTexture, NumberTextures[13], MenuTexture[6];
 GLuint vShader, fShader, Prog;
 
@@ -274,8 +274,7 @@ int main()
     glGenBuffers(1, &BoardVBO);
     glGenBuffers(6, MenuVBO);  //
 
-    glGenBuffers(16, BlockEBO);
-    glGenBuffers(1, &BoardEBO);
+    glGenBuffers(1, &EBO);
     glGenBuffers(6, MenuEBO); //
 
     InitializeBlocks();
@@ -286,7 +285,7 @@ int main()
     glBindVertexArray(BoardVAO);
     glBindBuffer(GL_ARRAY_BUFFER, BoardVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Board_Verticies), Board_Verticies, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BoardEBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices, GL_STATIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) 0);
     glEnableVertexAttribArray(0);
@@ -512,8 +511,7 @@ int main()
     glDeleteBuffers(16, BlockVBO);
     glDeleteBuffers(1, &BoardVBO);
     glDeleteBuffers(6, MenuVBO);
-    glDeleteBuffers(1, &BoardEBO);
-    glDeleteBuffers(16, BlockEBO);
+    glDeleteBuffers(1, &EBO);
     glDeleteBuffers(5, MenuEBO);
 
 
@@ -570,7 +568,7 @@ void InitializeBlocks()
         glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
         glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BlockEBO[i]);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void *) 0);
