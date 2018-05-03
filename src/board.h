@@ -35,6 +35,7 @@ class board {
         Generate();
         score = 0;
         state = 0;
+        srand(time(NULL));
     }
     board(int array[]) {
         for (int r = 0; r < 4; r++) {
@@ -52,6 +53,7 @@ class board {
         }
         score = 0;
         state = 0;
+        srand(time(NULL));
     }
 
     // Update functions for directional shift
@@ -397,7 +399,6 @@ class board {
         if (index == 0) {
             return 0;
         } else {
-            srand(time(NULL));
             int randomSpotIndex = rand() % index;
             int valueIndex = rand() % 2;
             boardArray[emptySpots[randomSpotIndex]] = newValue[valueIndex];
