@@ -7,6 +7,7 @@
 #include <string>
 #include <stdlib.h>
 #include <algorithm>
+#include <ctime>
 
 // C++ now includes a type for complex numbers std::complex which could also be used.
 // For this assignment, this is good enough
@@ -396,6 +397,7 @@ class board {
         if (index == 0) {
             return 0;
         } else {
+            srand(time(NULL));
             int randomSpotIndex = rand() % index;
             int valueIndex = rand() % 2;
             boardArray[emptySpots[randomSpotIndex]] = newValue[valueIndex];
