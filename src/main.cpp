@@ -206,11 +206,14 @@ bool keys[1024] = { false };
 int keyPressed = -1;
 board gameBoard;
 
-unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BlockEBO[16], BoardVAO, BoardEBO, MenuVBO[6], MenuVAO[6], MenuEBO[6];
+unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BoardVAO, EBO, MenuVBO[6], MenuVAO[6], MenuEBO[6];
 unsigned int BoardTexture, NumberTextures[13], MenuTexture[6];
 GLuint vShader, fShader, Prog;
 
-
+unsigned int WinTexture, LoseTexture;
+int continuecheck = 0;
+int Reset = 0;
+int Continue = 0;
 
 int main()
 {
@@ -270,8 +273,7 @@ int main()
     glGenBuffers(1, &BoardVBO);
     glGenBuffers(6, MenuVBO);  //
 
-    glGenBuffers(16, BlockEBO);
-    glGenBuffers(1, &BoardEBO);
+    glGenBuffers(1, &EBO);
     glGenBuffers(6, MenuEBO); //
 
     InitializeBlocks();
@@ -282,7 +284,7 @@ int main()
     glBindVertexArray(BoardVAO);
     glBindBuffer(GL_ARRAY_BUFFER, BoardVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(Board_Verticies), Board_Verticies, GL_STATIC_DRAW);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BoardEBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices, GL_STATIC_DRAW);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) 0);
     glEnableVertexAttribArray(0);
@@ -290,6 +292,51 @@ int main()
     glEnableVertexAttribArray(1);
 
     loadBoardTexture();
+
+
+
+    //Some dummy code to load up and bind the Win Screen
+    //Currently, the loss screen is the same thing
+
+    glGenTextures(1, &WinTexture);
+    glBindTexture(GL_TEXTURE_2D, WinTexture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    stbi_set_flip_vertically_on_load(true);
+    int WinWidth, WinHeight, WinnrChannels;
+    unsigned char* Windata = stbi_load("../resources/Win.png", &WinWidth, &WinHeight, &WinnrChannels, 0);
+    if (Windata)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, WinWidth, WinHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, Windata);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(Windata);
+
+
+    glGenTextures(1, &LoseTexture);
+    glBindTexture(GL_TEXTURE_2D, LoseTexture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    stbi_set_flip_vertically_on_load(true);
+    Windata = stbi_load("../resources/Lose.png", &WinWidth, &WinHeight, &WinnrChannels, 0);
+    if (Windata)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, WinWidth, WinHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, Windata);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(Windata);
 
 
 
@@ -328,8 +375,16 @@ int main()
 
     glfwSetScrollCallback( window, scrollCallback );
 
+
+    gameBoard.SetWinValue(2048);
+
+
     while (!glfwWindowShouldClose(window))
     {
+
+        std::cout << gameBoard.winValue << std::endl;
+
+
         processInput(window);
 
         glClear(GL_COLOR_BUFFER_BIT);
@@ -349,6 +404,23 @@ int main()
         }
 
 
+        if (Reset == 1)
+        {
+            for (int r = 0; r < 4; r++) {
+                for (int c = 0; c < 4; c++) {
+                    gameBoard.boardArray[r*4+c] = 0;
+                }
+            }
+            gameBoard.ResetMoveArray(-1);
+            gameBoard.Generate();
+            gameBoard.Generate();
+            gameBoard.score = 0;
+            gameBoard.state = 0;
+            Reset = 0;
+        }
+
+
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 int value = gameBoard.GetValue(i, j);
@@ -366,6 +438,8 @@ int main()
 //            glBindBuffer(GL_ARRAY_BUFFER, MenuVBO[menu_value]);
 //            glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices, GL_STATIC_DRAW);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            gameBoard.SetWinValue(pow(2, (menu_value % 3) + 11));
+
 
         }
 
@@ -383,16 +457,76 @@ int main()
                 case 3:
                     gameBoard.ShiftRight();
                     break;
-                case 4:
-                    openmenu();
                 default:
                     break;
             }
             keyPressed = -1;
         }
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+        gameBoard.UpdateState();
+
+        /*
+         * These are some if conditions that check the state of the game
+         * If you win, then it pulls up a new screen
+         *      Press A to continue (Doubles the win score)
+         *      Press Enter to Reset the game
+         *      Press ESC to quit the game
+         *
+         * If you lose, then it pulls up a different screen
+         *      Press R to try again
+         *      Press ESC to quit the game
+         *
+         * Otherwise it refreshes the screen and continues
+         *
+         * At any point in the game, you can press ENTER to reset the game
+         */
+
+        if(gameBoard.state == 2)
+        {
+
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, WinTexture);
+            glUniform1i(glGetUniformLocation(Prog, "WinTexture"), 0);
+            glBindVertexArray(BoardVAO);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            if (continuecheck == 1)
+            {
+                glfwSwapBuffers(window);
+                while(Continue == 0)
+                {
+                    //glfwSwapBuffers(window);
+                    glfwPollEvents();
+                };
+                Continue = 0;
+                continuecheck = 0;
+                gameBoard.state = 0;
+                gameBoard.SetWinValue(gameBoard.winValue * 2);
+            }
+            continuecheck = 1;
+
+
+        }
+        if(gameBoard.state == 0)
+        {
+            glfwSwapBuffers(window);
+            glfwPollEvents();
+        }
+
+        if(gameBoard.state == 1)
+        {
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, LoseTexture);
+            glUniform1i(glGetUniformLocation(Prog, "LoseTexture"), 0);
+            glBindVertexArray(BoardVAO);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            glfwSwapBuffers(window);
+            while(Reset == 0)
+            {
+                glfwPollEvents();
+            };
+            gameBoard.state = 0;
+        }
     }
 
     glDeleteVertexArrays(1, &BoardVAO);
@@ -401,8 +535,7 @@ int main()
     glDeleteBuffers(16, BlockVBO);
     glDeleteBuffers(1, &BoardVBO);
     glDeleteBuffers(6, MenuVBO);
-    glDeleteBuffers(1, &BoardEBO);
-    glDeleteBuffers(16, BlockEBO);
+    glDeleteBuffers(1, &EBO);
     glDeleteBuffers(5, MenuEBO);
 
 
@@ -459,7 +592,7 @@ void InitializeBlocks()
         glBindBuffer(GL_ARRAY_BUFFER, BlockVBO[i]);
         glBufferData(GL_ARRAY_BUFFER, sizeof(Block_Verticies[i]), Block_Verticies[i], GL_STATIC_DRAW);
 
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, BlockEBO[i]);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void *) 0);
@@ -954,7 +1087,7 @@ void InitializeShaders()
 static void cursorPositionCallback( GLFWwindow *window, double xposition, double yposition )
 {
     if (cursorInWindow) {
-        std::cout << xposition << " : " << yposition << std::endl;
+        //std::cout << xposition << " : " << yposition << std::endl;
         // up arrow coordinates
         // x:291 y:64 bottom left (up)
         // x:350 y:64 bottom right (up)
@@ -988,12 +1121,12 @@ void cursorEnterCallback( GLFWwindow *window, int entered )
     if ( entered )
     {
         cursorInWindow = true;
-        std::cout << "Entered Window" << std::endl;
+        //td::cout << "Entered Window" << std::endl;
     }
     else
     {
         cursorInWindow= false;
-        std::cout << "Left window" << std::endl;
+        //std::cout << "Left window" << std::endl;
     }
 }
 
@@ -1060,7 +1193,7 @@ void mouseButtonCallback( GLFWwindow *window, int button, int action, int mods )
 
 void scrollCallback( GLFWwindow *window, double xoffset, double yoffset )
 {
-    std::cout << xoffset << " : " << yoffset << std::endl;
+    //std::cout << xoffset << " : " << yoffset << std::endl;
 }
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -1073,18 +1206,18 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     if(keys[GLFW_KEY_D]){
         open_menu = !open_menu;
     }
-    if(keys[GLFW_KEY_C])
+    if(keys[GLFW_KEY_ESCAPE])
     {
         glfwSetWindowShouldClose(window, 1);
+        Continue = 1;
+        Reset = 1;
     }
     else if (keys[GLFW_KEY_UP])
     {
         if (!open_menu) {
             keyPressed = 0;
         } else {
-            if (menu_value > 2) {
-                menu_value -= 3;
-            }
+            menu_value = menu_value % 3;
         }
     }
     else if (keys[GLFW_KEY_DOWN])
@@ -1092,9 +1225,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         if (!open_menu) {
             keyPressed = 1;
         } else {
-            if (menu_value <= 2) {
-                menu_value += 3;
-            }
+            menu_value = (menu_value % 3) + 3;
         }
     }
     else if (keys[GLFW_KEY_LEFT])
@@ -1112,12 +1243,22 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         if (!open_menu) {
             keyPressed = 3;
         } else {
-            if (menu_value >= 0 && menu_value < 3){
+            if (menu_value >= 0 && menu_value < 2){
                 menu_value += 1;
             }
         }
-    } else if (keys[GLFW_KEY_A])
+    }
+    else if (keys[GLFW_KEY_A])
     {
         keyPressed = 4;
+    }
+    else if (keys[GLFW_KEY_A])
+    {
+        Continue = 1;
+    }
+    else if (keys[GLFW_KEY_ENTER])
+    {
+        Continue = 1;
+        Reset = 1;
     }
 }
