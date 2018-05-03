@@ -306,10 +306,30 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     stbi_set_flip_vertically_on_load(true);
     int WinWidth, WinHeight, WinnrChannels;
-    unsigned char* Windata = stbi_load("resources/Win.jpg", &WinWidth, &WinHeight, &WinnrChannels, 0);
+    unsigned char* Windata = stbi_load("../resources/Win.png", &WinWidth, &WinHeight, &WinnrChannels, 0);
     if (Windata)
     {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WinWidth, WinHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, Windata);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, WinWidth, WinHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, Windata);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(Windata);
+
+
+    glGenTextures(1, &LoseTexture);
+    glBindTexture(GL_TEXTURE_2D, LoseTexture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    stbi_set_flip_vertically_on_load(true);
+    Windata = stbi_load("../resources/Lose.png", &WinWidth, &WinHeight, &WinnrChannels, 0);
+    if (Windata)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, WinWidth, WinHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, Windata);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
     else
@@ -355,8 +375,17 @@ int main()
 
     glfwSetScrollCallback( window, scrollCallback );
 
+
+    gameBoard.SetWinValue(2048);
+
+
+
     while (!glfwWindowShouldClose(window))
     {
+
+        std::cout << gameBoard.winValue << std::endl;
+
+
         processInput(window);
 
         glClear(GL_COLOR_BUFFER_BIT);
@@ -436,7 +465,7 @@ int main()
             keyPressed = -1;
         }
 
-
+        gameBoard.UpdateState();
 
         /*
          * These are some if conditions that check the state of the game
@@ -456,6 +485,7 @@ int main()
 
         if(gameBoard.state == 2)
         {
+
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, WinTexture);
@@ -477,6 +507,7 @@ int main()
             }
             continuecheck = 1;
 
+
         }
         if(gameBoard.state == 0)
         {
@@ -487,16 +518,16 @@ int main()
         if(gameBoard.state == 1)
         {
             glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, WinTexture);
-            glUniform1i(glGetUniformLocation(Prog, "WinTexture"), 0);
+            glBindTexture(GL_TEXTURE_2D, LoseTexture);
+            glUniform1i(glGetUniformLocation(Prog, "LoseTexture"), 0);
             glBindVertexArray(BoardVAO);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
+            glfwSwapBuffers(window);
             while(Reset == 0)
             {
-                glfwSwapBuffers(window);
                 glfwPollEvents();
             };
+            gameBoard.state = 0;
         }
 
 
@@ -1063,7 +1094,7 @@ void InitializeShaders()
 static void cursorPositionCallback( GLFWwindow *window, double xposition, double yposition )
 {
     if (cursorInWindow) {
-        std::cout << xposition << " : " << yposition << std::endl;
+        //std::cout << xposition << " : " << yposition << std::endl;
         // up arrow coordinates
         // x:291 y:64 bottom left (up)
         // x:350 y:64 bottom right (up)
@@ -1097,12 +1128,12 @@ void cursorEnterCallback( GLFWwindow *window, int entered )
     if ( entered )
     {
         cursorInWindow = true;
-        std::cout << "Entered Window" << std::endl;
+        //std::cout << "Entered Window" << std::endl;
     }
     else
     {
         cursorInWindow= false;
-        std::cout << "Left window" << std::endl;
+        //std::cout << "Left window" << std::endl;
     }
 }
 
@@ -1136,7 +1167,7 @@ void mouseButtonCallback( GLFWwindow *window, int button, int action, int mods )
 
 void scrollCallback( GLFWwindow *window, double xoffset, double yoffset )
 {
-    std::cout << xoffset << " : " << yoffset << std::endl;
+    //std::cout << xoffset << " : " << yoffset << std::endl;
 }
 static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
@@ -1149,9 +1180,11 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     if(keys[GLFW_KEY_D]){
         open_menu = !open_menu;
     }
-    if(keys[GLFW_KEY_C])
+    if(keys[GLFW_KEY_ESCAPE])
     {
         glfwSetWindowShouldClose(window, 1);
+        Continue = 1;
+        Reset = 1;
     }
     else if (keys[GLFW_KEY_UP])
     {
@@ -1192,9 +1225,6 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
                 menu_value += 1;
             }
         }
-    } else if (keys[GLFW_KEY_A])
-    {
-        keyPressed = 4;
     }
     else if (keys[GLFW_KEY_A])
     {
