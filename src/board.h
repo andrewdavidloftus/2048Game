@@ -478,7 +478,7 @@ class board {
     int GetScore() const {
         return score;
     }
-    int GetGameState()  const {
+    int GetGameState() const {
         return state;
     }
     int GetValue(int r, int c)  const {
