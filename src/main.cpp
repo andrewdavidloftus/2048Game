@@ -1250,10 +1250,6 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     }
     else if (keys[GLFW_KEY_A])
     {
-        keyPressed = 4;
-    }
-    else if (keys[GLFW_KEY_A])
-    {
         Continue = 1;
     }
     else if (keys[GLFW_KEY_ENTER])
