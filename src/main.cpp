@@ -440,6 +440,7 @@ int main()
 //            glBindBuffer(GL_ARRAY_BUFFER, MenuVBO[menu_value]);
 //            glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices), indices, GL_STATIC_DRAW);
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            gameBoard.SetWinValue(pow(2, (menu_value % 3) + 11));
 
         }
 
@@ -1191,9 +1192,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         if (!open_menu) {
             keyPressed = 0;
         } else {
-            if (menu_value > 2) {
-                menu_value -= 3;
-            }
+            menu_value = menu_value % 3;
         }
     }
     else if (keys[GLFW_KEY_DOWN])
@@ -1201,9 +1200,7 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         if (!open_menu) {
             keyPressed = 1;
         } else {
-            if (menu_value <= 2) {
-                menu_value += 3;
-            }
+            menu_value = (menu_value % 3) + 3;
         }
     }
     else if (keys[GLFW_KEY_LEFT])
@@ -1221,10 +1218,14 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
         if (!open_menu) {
             keyPressed = 3;
         } else {
-            if (menu_value >= 0 && menu_value < 3){
+            if (menu_value >= 0 && menu_value < 2){
                 menu_value += 1;
             }
         }
+    }
+    else if (keys[GLFW_KEY_A])
+    {
+        keyPressed = 4;
     }
     else if (keys[GLFW_KEY_A])
     {
