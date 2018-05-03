@@ -210,6 +210,10 @@ unsigned int BlockVBO[16], BoardVBO, BlockVAO[16], BlockEBO[16], BoardVAO, Board
 unsigned int BoardTexture, NumberTextures[13], MenuTexture[6];
 GLuint vShader, fShader, Prog;
 
+unsigned int WinTexture, LoseTexture;
+int continuecheck = 0;
+int Reset = 0;
+int Continue = 0;
 
 
 int main()
@@ -292,6 +296,30 @@ int main()
     loadBoardTexture();
 
 
+    //Some dummy code to load up and bind the Win Screen
+    //Currently, the loss screen is the same thing
+
+    glGenTextures(1, &WinTexture);
+    glBindTexture(GL_TEXTURE_2D, WinTexture);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    stbi_set_flip_vertically_on_load(true);
+    int WinWidth, WinHeight, WinnrChannels;
+    unsigned char* Windata = stbi_load("resources/Win.jpg", &WinWidth, &WinHeight, &WinnrChannels, 0);
+    if (Windata)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, WinWidth, WinHeight, 0, GL_RGB, GL_UNSIGNED_BYTE, Windata);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(Windata);
+
+
 
 
     // Initialize Menu
@@ -348,6 +376,24 @@ int main()
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         }
 
+        if (Reset == 1)
+        {
+            for (int r = 0; r < 4; r++) {
+                for (int c = 0; c < 4; c++) {
+                    gameBoard.boardArray[r*4+c] = 0;
+                }
+            }
+            gameBoard.ResetMoveArray(-1);
+            gameBoard.Generate();
+            gameBoard.Generate();
+            gameBoard.score = 0;
+            gameBoard.state = 0;
+            Reset = 0;
+        }
+
+
+
+
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
@@ -391,8 +437,73 @@ int main()
             keyPressed = -1;
         }
 
-        glfwSwapBuffers(window);
-        glfwPollEvents();
+
+
+        /*
+         * These are some if conditions that check the state of the game
+         * If you win, then it pulls up a new screen
+         *      Press A to continue (Doubles the win score)
+         *      Press Enter to Reset the game
+         *      Press ESC to quit the game
+         *
+         * If you lose, then it pulls up a different screen
+         *      Press R to try again
+         *      Press ESC to quit the game
+         *
+         * Otherwise it refreshes the screen and continues
+         *
+         * At any point in the game, you can press ENTER to reset the game
+         */
+
+        if(gameBoard.state == 2)
+        {
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, WinTexture);
+            glUniform1i(glGetUniformLocation(Prog, "WinTexture"), 0);
+            glBindVertexArray(BoardVAO);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            if (continuecheck == 1)
+            {
+                glfwSwapBuffers(window);
+                while(Continue == 0)
+                {
+                    //glfwSwapBuffers(window);
+                    glfwPollEvents();
+                };
+                Continue = 0;
+                continuecheck = 0;
+                gameBoard.state = 0;
+                gameBoard.SetWinValue(gameBoard.winValue * 2);
+            }
+            continuecheck = 1;
+
+        }
+        if(gameBoard.state == 0)
+        {
+            glfwSwapBuffers(window);
+            glfwPollEvents();
+        }
+
+        if(gameBoard.state == 1)
+        {
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, WinTexture);
+            glUniform1i(glGetUniformLocation(Prog, "WinTexture"), 0);
+            glBindVertexArray(BoardVAO);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+            while(Reset == 0)
+            {
+                glfwSwapBuffers(window);
+                glfwPollEvents();
+            };
+        }
+
+
+
+
+
     }
 
     glDeleteVertexArrays(1, &BoardVAO);
@@ -1086,5 +1197,14 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     } else if (keys[GLFW_KEY_A])
     {
         keyPressed = 4;
+    }
+    else if (keys[GLFW_KEY_A])
+    {
+        Continue = 1;
+    }
+    else if (keys[GLFW_KEY_ENTER])
+    {
+        Continue = 1;
+        Reset = 1;
     }
 }
