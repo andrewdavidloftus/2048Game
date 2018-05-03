@@ -999,28 +999,61 @@ void cursorEnterCallback( GLFWwindow *window, int entered )
 
 void mouseButtonCallback( GLFWwindow *window, int button, int action, int mods )
 {
-    if ( button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && !open_menu)
+    if ( button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && !open_menu && cursorInWindow)
     {
-        if (xpos > 291 && xpos < 350) {
-            if (ypos < 64 && ypos > 11) {
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
+
+        //3x3 has 9 . [0,1,2]
+        // squares    [3,4,5]
+        //            [6,7,8]
+        // has 16 nodes
+        //            [ 0, 1, 2, 3]
+        //            [ 4, 5, 6, 7]
+        //            [ 8, 9,10,11]
+        //            [12,13,14,15]
+        double xnodes1_5_9_13 = 36*width/80;
+        double xnodes0_4_8_12 = 30*width/80;
+        double xnodes2_6_10_14 = 44*width/80;
+        double xnodes3_7_11_15 = 50*width/80;
+        double ynodes0_1_2_3 = 0;
+        double ynodes4_5_6_7 = 6*height/90;
+        double ynodes8_9_10_11 = 14*height/90;
+        double ynodes12_13_14_15 = 21*height/90;
+
+        double menuL = 6*width/80;
+        double menuR = 22*width/80;
+        double menuT = 12*height/90;
+        double menuB = 19*height/90;
+
+        if (xpos > xnodes1_5_9_13 && xpos < xnodes2_6_10_14) {
+            if (ypos < ynodes4_5_6_7 && ypos > ynodes0_1_2_3) {
                 gameBoard.ShiftUp();
             }
         }
-        if (xpos > 235 && xpos < 290){
-            if (ypos < 124 && ypos > 64){
+        if (xpos > xnodes0_4_8_12 && xpos < xnodes1_5_9_13){
+            if (ypos < ynodes8_9_10_11 && ypos > ynodes4_5_6_7){
                 gameBoard.ShiftLeft();
             }
         }
-        if (xpos > 291 && xpos < 350){
-            if (ypos < 176 && ypos > 126){
+        if (xpos > xnodes1_5_9_13 && xpos < xnodes2_6_10_14){
+            if (ypos < ynodes12_13_14_15 && ypos > ynodes8_9_10_11){
                 gameBoard.ShiftDown();
             }
         }
-        if (xpos > 351 && xpos < 403){
-            if (ypos < 123 && ypos > 65){
+        if (xpos > xnodes2_6_10_14 && xpos < xnodes3_7_11_15){
+            if (ypos < ynodes8_9_10_11 && ypos > ynodes4_5_6_7){
                 gameBoard.ShiftRight();
             }
         }
+
+        if (xpos < menuR && xpos > menuL){
+            if(ypos < menuB && ypos > menuT){
+                open_menu = true;
+            }
+        }
+
+
     }
 
 }
