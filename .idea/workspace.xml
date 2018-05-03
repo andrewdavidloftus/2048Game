@@ -54,8 +54,13 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="330" column="5" lean-forward="true" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
+            <state relative-caret-position="236">
+              <caret line="459" column="26" lean-forward="true" selection-start-line="459" selection-start-column="26" selection-end-line="459" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#121#137#0" expanded="true" />
+                <element signature="e#218#247#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +77,9 @@
       <find>WinTexture</find>
       <find>GetWine</find>
       <find>cout</find>
+      <find>menu</find>
+      <find>menu_value</find>
+      <find>MenuTexture</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -245,23 +253,37 @@
       <option name="project" value="LOCAL" />
       <updated>1525383256819</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="I'm pushing my makeshift win and loss screens as well as some bug fixes">
+      <created>1525385658436</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525385658436</updated>
+    </task>
+    <task id="LOCAL-00011" summary="More bugfixes">
+      <created>1525386772614</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1525386772614</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45608000" />
+    <option name="totallyTimeSpent" value="46915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.0640625" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.0640625" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32731137" />
       <window_info anchor="bottom" id="CMake" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.2996812" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.32731137" />
+      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.32731137" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="4" />
@@ -328,7 +350,9 @@
     <MESSAGE value="Added &lt;ctime&gt; and srand(time(NULL)) to make it at least pseudo-random" />
     <MESSAGE value="Moved the srand into the constructor" />
     <MESSAGE value="Combined the BlockEBO and BoardEBO into a single EBO since they're all drawn in the same direction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Combined the BlockEBO and BoardEBO into a single EBO since they're all drawn in the same direction" />
+    <MESSAGE value="I'm pushing my makeshift win and loss screens as well as some bug fixes" />
+    <MESSAGE value="More bugfixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="More bugfixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -362,6 +386,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="208" column="5" selection-start-line="208" selection-start-column="5" selection-end-line="208" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#218#247#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -483,8 +512,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="330" column="5" lean-forward="true" selection-start-line="330" selection-start-column="5" selection-end-line="330" selection-end-column="5" />
+        <state relative-caret-position="236">
+          <caret line="459" column="26" lean-forward="true" selection-start-line="459" selection-start-column="26" selection-end-line="459" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#218#247#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

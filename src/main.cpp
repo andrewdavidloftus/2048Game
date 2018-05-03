@@ -458,8 +458,6 @@ int main()
                 case 3:
                     gameBoard.ShiftRight();
                     break;
-                case 4:
-                    openmenu();
                 default:
                     break;
             }
