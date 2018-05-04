@@ -417,6 +417,7 @@ int main()
             gameBoard.score = 0;
             gameBoard.state = 0;
             Reset = 0;
+            open_menu = false;
         }
 
 
@@ -555,33 +556,6 @@ void processInput(GLFWwindow *window)
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
-}
-
-void openmenu(){
-    if (keyPressed != -1) {
-        switch (keyPressed) {
-            case 0:
-                gameBoard.ShiftUp();
-                break;
-            case 1:
-                gameBoard.ShiftDown();
-                break;
-            case 2:
-                gameBoard.ShiftLeft();
-                break;
-            case 3:
-                gameBoard.ShiftRight();
-                break;
-            default:
-                break;
-        }
-        keyPressed = -1;
-    }
-    printf("%d\n", gameBoard.UpdateState());
-    printf("%d\n", gameBoard.GetWinValue());
-    gameBoard.SetWinValue(4096);
-    printf("%d\n", gameBoard.GetWinValue());
-    menu_value++;
 }
 
 void InitializeBlocks()
@@ -1182,15 +1156,79 @@ void mouseButtonCallback( GLFWwindow *window, int button, int action, int mods )
 
         if (xpos < menuR && xpos > menuL){
             if(ypos < menuB && ypos > menuT){
+                std::cout << "open menu = " <<open_menu;
                 open_menu = true;
+                std::cout << "open menu = " <<open_menu;
             }
         }
 
 
+    } else if ( button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS && open_menu && cursorInWindow){
+        int width, height;
+        glfwGetWindowSize(window, &width, &height);
+        double quitL = 76*width/640;
+        double quitR = 244*width/640;
+        double quitT = 110*height/720;
+        double quitB = 168*height/720;
+
+        double newgameL = 396*width/620;
+        double newgameR = 566*width/620;
+        double newgameT = 110*height/720;
+        double newgameB = 168*height/720;
+
+        double returnL = 170*width/640;
+        double returnR = 475*width/640;
+        double returnT = 496*height/720;
+        double returnB = 532*height/720;
+
+        double selectright_L = 426*width/640;
+        double selectright_R = 450*width/640;
+        double selectright_T = 388*height/720;
+        double selectright_B = 420*height/720;
+
+        double selectleft_L = 188*width/640;
+        double selectleft_R = 215*width/640;
+        double selectleft_T = 388*height/720;
+        double selectleft_B = 420*height/720;
+
+        if (xpos > quitL && xpos < quitR) {
+            if (ypos < quitB && ypos > quitT) {
+                glfwSetWindowShouldClose(window, 1);
+                Continue = 1;
+                Reset = 1;
+            }
+        }
+        if (xpos > newgameL && xpos < newgameR){
+            if (ypos < newgameB && ypos > newgameT){
+                Reset=1;
+                open_menu = false;
+            }
+        }
+
+        if (xpos > returnL && xpos < returnR) {
+            if (ypos < returnB && ypos > returnT) {
+                open_menu = false;
+            }
+        }
+
+        if (xpos > selectleft_L && xpos < selectleft_R) {
+            if (ypos < selectleft_B && ypos > selectleft_T) {
+                if (menu_value < 3 && menu_value > 0){
+                    menu_value -= 1;
+                }
+            }
+        }
+
+        if (xpos > selectright_L && xpos < selectright_R) {
+            if (ypos < selectright_B && ypos > selectright_T) {
+                if (menu_value >= 0 && menu_value < 2){
+                    menu_value += 1;
+                }
+            }
+        }
     }
 
 }
-
 void scrollCallback( GLFWwindow *window, double xoffset, double yoffset )
 {
     //std::cout << xoffset << " : " << yoffset << std::endl;
