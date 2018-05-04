@@ -381,10 +381,6 @@ int main()
 
     while (!glfwWindowShouldClose(window))
     {
-
-        std::cout << gameBoard.winValue << std::endl;
-
-
         processInput(window);
 
         glClear(GL_COLOR_BUFFER_BIT);
